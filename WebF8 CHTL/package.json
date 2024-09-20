@@ -1,0 +1,41 @@
+{
+  "name": "webf8_2",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful": "prettier --single-quote --tab-width 4 --write 'src/**/*.{js,json,scss}",
+    "start": "nodemon --inspect src/index.js",
+    "watch": "node-sass --watch src/resources/scss/app.scss --output src/public/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dong1311/NodeJS_Blog.git"
+  },
+  "author": "Dong1311",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dong1311/NodeJS_Blog/issues"
+  },
+  "homepage": "https://github.com/Dong1311/NodeJS_Blog#readme",
+  "description": "",
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.5.1",
+    "mongoose-delete": "^1.0.2",
+    "mongoose-sequence": "^6.0.1",
+    "mongoose-slug-updater": "^3.3.0",
+    "open": "^10.1.0"
+  },
+  "devDependencies": {
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.7",
+    "morgan": "^1.10.0",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
+  }
+}

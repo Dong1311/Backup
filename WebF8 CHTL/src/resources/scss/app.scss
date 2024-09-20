@@ -1,0 +1,40 @@
+@import 'variables';
+
+.card-course-item {
+    margin-top: 16px;
+}
+
+.select-all-option {
+    width: 220px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.sidebar {
+    background-color: $sidebar-bg-color;
+    color: $sidebar-text-color;
+    height: 100vh; // Full viewport height
+}
+
+// Sidebar links
+.sidebar a {
+    color: $sidebar-text-color;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    
+    &:hover {
+        background-color: $sidebar-hover-bg-color;
+    }
+}
+
+// Active class for current page link
+.active {
+    background-color: $sidebar-hover-bg-color;
+}
+
+// Padding for content area
+.content {
+    padding: 20px;
+}
+

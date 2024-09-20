@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        
+        {{!-- <a href="/me/trash/courses">Thùng rác ({{deletedCount}})</a> --}}
+        </div>
+        <div class="row">
+            <div class="col-md-3 sidebar p-3">
+                <h3>Nhân viên thu ngân</h3>
+                <p class="d-inline-flex gap-1">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Chức năng <i class="bi bi-arrow-down-short"></i>
+                    
+                    </a>
+                    
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <button class="btn btn-primary "  data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Danh sách mặt hàng
+                    </button>
+                    <button class="btn btn-primary mt-4"  data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Thêm hóa đơn
+                    </button>
+                    <button class="btn btn-primary mt-4"  data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Thống kê
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-9 content">
+                <h3 class="text-center mb-4 mt-4">Danh sách mặt hàng</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên Sản Phẩm</th>
+                            <th scope="col">Ngày Sản Xuất</th>
+                            <th scope="col">Hạn Sử Dụng</th>
+                            <th scope="col">Số Lượng</th>
+                            <th scope="col">Đơn Vị</th>
+                            <th colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each products}}
+                            <tr>
+                                <td>{{sum @index 1}}</td>
+                                <td>{{this.name}}</td>
+                                <td>{{this.manufacture_date}}</td>
+                                <td>{{this.expiration_date}}</td>
+                                <td>{{this.quantity}}</td>
+                                <td>{{this.unit}}</td>
+                                <td>
+                                    <a href="/products/{{this.product_id}}/edit" class="btn btn-primary">Sửa</a>
+                                </td>
+                                <td>
+                                    <a href="/courses/{{this._id}}/edit" class="btn btn-primary">Xóa</a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

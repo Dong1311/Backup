@@ -1,0 +1,38 @@
+<div class='mt-4 ml-5 mr-3'>
+    <h3>Đăng khóa học</h3>
+
+    <form method='POST' action='/courses/store'>
+        <div class='form-label'>
+            <label for='name'>Tên khóa học</label>
+            <input type='text' class='form-control' id='name' name='name' />
+        </div>
+
+        <div class='form-label'>
+            <label for='description'>Mô tả khóa học</label>
+            <input
+                type='text'
+                class='form-control'
+                id='description'
+                name='description'
+            />
+        </div>
+
+        <div class='form-label'>
+            <label for='videoID'>Video ID</label>
+            <input
+                type='text'
+                class='form-control'
+                id='videoID'
+                name='videoID'
+            />
+        </div>
+
+        <div class='form-label'>
+            <label for='level'>Trình độ</label>
+            <input type='text' class='form-control' id='level' name='level' />
+        </div>
+
+        <button type='submit' class='btn btn-primary mt-4'>Thêm khóa học</button>
+    </form>
+
+</div>
